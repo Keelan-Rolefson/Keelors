@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="app">
+
      <div class="wrap sidebar left_sidebar_wrap">
       <div class="container left_sidebar_container">
 
@@ -17,22 +18,38 @@
          </div>
         </div>
 
-       <div class="wrap saved_palettes_wrap">
+       <div class="wrap saved_palettes_wrap" id="savedPalettesWrap">
         <div class="container saved_palettes_container" id="savedPalettesContainer">
-          <div class="saved_palette" id="savedPalette">
-            <div class="saved_palette_name">
 
-            </div>
-            <div class="saved_palette_colors">
+         <div class="wrap saved_palette_wrap" id="savedPaletteWrap">
+          <div class="container saved_palette_container" id="savedPaletteContainer">
 
-            </div>
+           <div class="container saved_palette_name_container">
+            <p class="saved_palette_p"> Saved Palette </p>
+           </div>
+
+           <div class="container saved_palette_colors_container">
+             <div class="saved_palette_color">
+              <span class="saved_palette_color_HEX"></span>
+             </div>
+             <div class="saved_palette_color">
+              <span class="saved_palette_color_HEX"></span>
+             </div>
+             <div class="saved_palette_color">
+              <span class="saved_palette_color_HEX"></span>
+             </div>
+           </div>
+
           </div>
+         </div>
+
         </div>
        </div>
+
       </div>  
      </div>
      
-     <div class="wrap palette_wrap" id="paletteWrap">
+     <div class="wrap palette_wrap" id="activePaletteWrap">
 
      <div class="wrap add_swatch_button_wrap">
       <div class="container add_swatch_button_container">
@@ -70,5 +87,6 @@
 
 
     <script src="script.js"></script>
+    <script src="palettes.js"></script>
 </body>
 </html>

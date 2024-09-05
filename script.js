@@ -1,10 +1,12 @@
 "use strict";
 
 const savePaletteButton = document.getElementById('savePaletteBtn');
+const savedPaletteWrap = document.getElementById('savedPaletteWrap');
+const savedPaletteContainer = document.getElementById('savedPaletteContainer');
+const savedPalettesWrap = document.getElementById('savedPalettesWrap');
 const savedPalettesContainer = document.getElementById('savedPalettesContainer');
-const savedPalette = document.getElementById('savedPalette');
 const addPaletteButton = document.getElementById('addPaletteBtn');
-const palette = document.getElementById('paletteWrap');
+const activePalette = document.getElementById('activePaletteWrap');
 const swatches = document.getElementById('swatchesWrap');
 const swatch = document.getElementById('swatchWrap0');
 const swatchId = document.getElementById('swatchWrap0').id;
@@ -20,7 +22,6 @@ swatches.addEventListener('input', (event) => {
         const color = event.target.value;
         let hexText = event.target.parentNode.nextSibling.nextSibling.childNodes[1];
         let rgbText = event.target.parentNode.nextSibling.nextSibling.childNodes[5];
-        console.log(hexText);
         hexText.textContent = color;
         rgbText.textContent = hexToRgb(color);
 
@@ -38,7 +39,7 @@ swatches.addEventListener('input', (event) => {
 function addSwatch() {
     if (swatchIds.length === 4) {
         let newRow = swatches.cloneNode(true);
-        palette.append(newRow);
+        activePalette.append(newRow);
     }
     if (swatchIds.length != 4) {
         let newSwatch = swatch.cloneNode(true);
@@ -56,19 +57,3 @@ function addSwatch() {
 
 addSwatchButton.addEventListener('click', addSwatch);
 
-// Add palette
-
-function addPalette() {
-    let newPalette = savedPalette.cloneNode(true);
-    savedPalettesContainer.append(newPalette);
-}
-
-addPaletteButton.addEventListener('click', addPalette);
-
-// Save palette
-
-function savePalette() {
-    
-}
-
-savePaletteButton.addEventListener('click', savePalette);

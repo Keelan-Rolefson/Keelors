@@ -1,0 +1,142 @@
+// Utility
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    text-shadow: -1px 1px #f1f1f1;
+    font-size: 1.15rem;
+}
+.app {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1f1f1f;
+}
+.wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1f1f;
+    border: solid 2px #f1f1f1;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar {
+    width: 100%;
+    max-width: 480px;
+    border: solid 4px #f1f1f1;
+}
+
+//Parts
+
+.left_sidebar_wrap {
+
+    .left_sidebar_container {
+
+    }
+    .add_palette_button_wrap {
+        height: 72px;
+    }
+    .add_palette_button_container {
+        height: 100%;
+    }
+    .add_palette_button {
+        height: 48px;
+        width: 264px;
+    }
+    .saved_palettes_wrap {
+        
+        .saved_palettes_container {
+            justify-content: flex-start;
+        }
+        .saved_palette {
+            margin: 24px;
+            width: 100%;
+            max-width: 436px;
+            height: 100%;
+            max-height: 192px;
+            border: solid 4px #f1f1f1;
+            border-radius: 24px 24px 12px 12px;
+        }
+        .saved_palette_name {
+            width: 100%;
+            height: 48px;
+            border-bottom: solid 4px #f1f1f1;
+        }
+        .saved_palette_colors {
+
+        }
+    }
+}
+
+.right_sidebar_wrap {
+
+    .save_palette_button {
+        width: 264px;
+        height: 48px;
+    }
+}
+
+.palette_wrap {
+    width: 100%;
+    max-width: 1600px;
+
+    .selected_palette_wrap {
+
+    }
+
+    .add_swatch_button_wrap {
+        height: 100%;
+        max-height: 72px;
+
+        .add_swatch_button_container {
+        }
+        .add_swatch_button {
+            cursor: pointer;
+            width: 480px;
+            height: 48px;
+        }
+    }
+
+    .swatches_wrap {
+
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+
+        .swatch_wrap {
+            justify-content: center;
+        }
+        .swatch_input_wrap {
+            background-color: #1f1f1f;
+        }
+        .swatch_input_container {
+            width: 100%;
+            height: 100%;
+        }
+        .swatch_input{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            max-height: 1300px;
+            outline: none;
+        }
+        .swatch_text_container {
+            position: fixed;
+            text-align: center;
+            height: 100%;
+            max-height: 300px;
+            max-width: 192px;
+        }
+    }
+}

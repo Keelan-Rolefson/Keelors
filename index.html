@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keelors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+     <div class="wrap sidebar left_sidebar_wrap">
+      <div class="container left_sidebar_container">
+
+        <div class="wrap add_palette_button_wrap">
+         <div class="container add_palette_button_container">
+          <button class="add_palette_button" id="addPaletteBtn"> Add Palette </button>
+         </div>
+        </div>
+
+       <div class="wrap saved_palettes_wrap">
+        <div class="container saved_palettes_container" id="savedPalettesContainer">
+          <div class="saved_palette" id="savedPalette">
+            <div class="saved_palette_name">
+
+            </div>
+            <div class="saved_palette_colors">
+
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>  
+     </div>
+     
+     <div class="wrap palette_wrap" id="paletteWrap">
+
+     <div class="wrap add_swatch_button_wrap">
+      <div class="container add_swatch_button_container">
+       <button type="button" class="add_swatch_button" id="addSwatchBtn"> Add Swatch </button>
+      </div>
+     </div>
+
+      <div class="wrap swatches_wrap" id="swatchesWrap">
+
+       <div class="wrap swatch_wrap" id ="swatchWrap0">
+        <div class="container swatch_input_container">
+         <input type="color" class="swatch_input" id="swatchInput" value="#ffffff">
+        </div>
+        <div class="container swatch_text_container">
+         <p><span id="hexValue" class="hex_value">#ffffff</span> </p> <br>
+         <p><span id="rgbValue" class="rgb_value" >rgb(255, 255, 255)</span></p>
+        </div>
+       </div>
+
+      </div>
+     </div>
+
+     <div class="wrap sidebar right_sidebar_wrap">
+      <div class="container right_sidebar_container">
+       <div class="wrap palette_options_wrap">
+        <div class="container palette_options_container">
+          <button class="save_palette_button" id="savePaletteBtn"> Save Palette </button>
+        </div>
+       </div>
+      </div>  
+     </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,12 +1,5 @@
 "use strict";
 
-const savePaletteButton = document.getElementById('savePaletteBtn');
-const savedPaletteWrap = document.getElementById('savedPaletteWrap');
-const savedPaletteContainer = document.getElementById('savedPaletteContainer');
-const savedPalettesWrap = document.getElementById('savedPalettesWrap');
-const savedPalettesContainer = document.getElementById('savedPalettesContainer');
-const addPaletteButton = document.getElementById('addPaletteBtn');
-const activePalette = document.getElementById('activePaletteWrap');
 const swatches = document.getElementById('swatchesWrap');
 const swatch = document.getElementById('swatchWrap0');
 const swatchId = document.getElementById('swatchWrap0').id;

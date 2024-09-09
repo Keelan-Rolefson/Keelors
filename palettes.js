@@ -12,12 +12,15 @@ addPaletteButton.addEventListener('click', addPalette);
 // Save Palette
 
 function savePalette() {
-    for (let i = 0; i < swatchInputs.length; i++) {
-        console.log(swatchInputs[i].value);
+    let savedPaletteColorsContainer = document.getElementById('savedPaletteColorsContainer');
+    let savedPaletteColor = savedPaletteColorsContainer.firstChild.nextSibling;
+    let savedPaletteColorHEX = savedPaletteColor.firstChild.nextSibling;
 
+    for (i = 0; i < swatchInputs.length; i++) {
+        let colors = swatchInputs[i].value;
+        console.log(colors);
     }
 }
-
 savePaletteButton.addEventListener('click', savePalette);
 
 // Focus Palette

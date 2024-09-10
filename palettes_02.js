@@ -1,3 +1,5 @@
+"use strict";
+
 const savePaletteButton = document.getElementById('savePaletteBtn');
 const savedPalettesWrap = document.getElementById('savedPalettesWrap');
 const savedPalettesContainer = document.getElementById('savedPalettesContainer');
@@ -10,9 +12,7 @@ const addPaletteButton = document.getElementById('addPaletteBtn');
 
 function savePalette() {
   for (let i = 0; i < swatchInputs.length; i++) {
-  let color = swatchInputs[i].value;
-   console.log(swatchInputs[i]);
-   console.log(swatchInputs[i].value);
+   let color = swatchInputs[i].value;
    if (i === 0) {
     savedPaletteColor.style = "background-color: " + color;
    }

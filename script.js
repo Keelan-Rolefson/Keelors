@@ -2,13 +2,11 @@
 
 const swatches = document.getElementById('swatchesWrap');
 const swatch = document.getElementById('swatchWrap0');
-const swatchId = document.getElementById('swatchWrap0').id;
 const addSwatchButton = document.getElementById('addSwatchBtn');
 let swatchInputs = document.querySelectorAll('.swatch_input');
 let hexValues = document.querySelectorAll('span.hex_value');
 let rgbValues = document.querySelectorAll('span.rgb_value');
 
-let swatchIds = [];
 
 swatches.addEventListener('input', (event) => {
     if(event.target.tagName === 'INPUT') {
@@ -30,16 +28,13 @@ swatches.addEventListener('input', (event) => {
 // Add swatch
 
 function addSwatch() {
-    if (swatchIds.length === 4) {
+    if (swatchInputs.length === 4) {
         let newRow = swatches.cloneNode(true);
         activePalette.append(newRow);
     }
-    if (swatchIds.length != 4) {
+    if (swatchInputs.length != 4) {
         let newSwatch = swatch.cloneNode(true);
-        let newId = swatchId.slice(0,10).concat(swatchIds.length+1);
         swatches.append(newSwatch);
-        newSwatch.id = newId;
-        swatchIds.push(newId);
         swatchInputs = document.querySelectorAll('input.swatch_input');
         hexValues = document.querySelectorAll('span.hex_value');
         rgbValues = document.querySelectorAll('span.rgb_value');

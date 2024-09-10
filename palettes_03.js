@@ -5,9 +5,13 @@ let savedPaletteColorsContainer = document.getElementById('savedPaletteColorsCon
 let savedPaletteColor = savedPaletteColorsContainer.firstElementChild;
 let savedPaletteColorHex = savedPaletteColor.firstElementChild.firstElementChild;
 let nameInput = document.getElementById('paletteNameInput');
+let nameSpace = document.getElementById('paletteNameInput').value;
 let colors = [];
 let newPalettes = [];
 
+function init() {
+    window.onload
+}
 
 class Palette {
     constructor(name, colors) {
@@ -20,6 +24,9 @@ class Palette {
     get colors() {
         return this._colors;
     }
+    setName() {
+        
+    }
     setColors() {
         colors.forEach((_colors) => {
         })
@@ -31,27 +38,26 @@ const paletteAutumn = new Palette('Autumn', ['#A53F2B','#4C230A','#280004']);
 
 newPalettes.push(paletteAutumn, paletteSummer);
 
-nameInput.addEventListener('input', () => {
+nameInput.addEventListener('submit', () => {
     nameSpace = document.getElementById('paletteNameInput').value;
 })
 
 savePaletteButton.addEventListener('click', () => {
-    let name = nameInput.value;
-    for (let i = 0; i < swatchInputs.length; i++) {
-     colors.push(swatchInputs[i].value);
-     if (i === 0) {
-      savedPaletteColor.style = "background-color: " + colors;
-      savedPaletteColorHex.textContent = colors;
-     }
-     if (i > 0) {
-      const newPaletteColor = savedPaletteColor.cloneNode(true);
-      savedPaletteColorsContainer.appendChild(newPaletteColor);
-      newPaletteColor.style = "background-color: " + colors[i];
-      savedPaletteColorHex.textContent = colors[i];
-     }  
-    }    
-   let newPalette = new Palette(name, colors);
-   console.log(colors);
-   newPalette.setColors();
-   newPalettes.push(newPalette);
+ let name = nameInput.value;
+  for (let i = 0; i < swatchInputs.length; i++) {
+   colors.push(swatchInputs[i].value);
+   if (i === 0) {
+    savedPaletteColor.style = "background-color: " + colors;
+    savedPaletteColorHex.textContent = colors;
+   }
+   if (i > 0) {
+    const newPaletteColor = savedPaletteColor.cloneNode(true);
+    savedPaletteColorsContainer.appendChild(newPaletteColor);
+    newPaletteColor.style = "background-color: " + colors[i];
+    savedPaletteColorHex.textContent = colors[i];
+   }  
+  }    
+ let newPalette = new Palette(name, colors);
+ newPalette.setColors();
+ newPalettes.push(newPalette);
 });
